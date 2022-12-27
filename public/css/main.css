@@ -1,0 +1,33 @@
+.my-jumbotron{
+    padding: 5px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* Make the image fully responsive */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+    
+.carousel-item{
+    height: 450px;
+} 
+.carousel-item img{
+    height: 450px;
+}
+
+my-map-container{
+    overflow:hidden;
+    padding-bottom:50%;
+    }
+
+.my-map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+}
+
+.my-col{
+    padding:20px;
+}

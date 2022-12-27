@@ -1,0 +1,68 @@
+<%- include('./includes/head.ejs') %>
+</head>
+<body>
+  <%- include('./includes/navigation.ejs') %>
+  
+  <div class="container-fluid bg-secondary py-3">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-12 col-md-8 ">
+        <div class="card">
+          <div class="card-body">
+
+            <h3 class="card-title">Book Online!</h3>
+
+            <form action="" method="POST">
+              <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Name" name="username" required>
+              </div>
+            
+              <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+              </div>
+            
+              <div class="form-group">
+                <label for="inputMobile">Mobile Number</label>
+                <input type="text" class="form-control" id="inputMobile" placeholder="Mobile Number" name="phoneNumber" required>
+              </div>
+            
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required>
+              </div>
+            
+              <div class="form-group">
+                <label for="inputConfirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" name="confirmationPassword" id="inputConfirmPassword" placeholder="Confirm Password" required>
+              </div>
+
+              <div >
+                <a href="/booking/login">Already Booked? Click here to see booking status.</a>
+              </div>
+
+              <% if(error && error.length > 0){ %>
+              <div class="alert alert-danger" role="alert">
+                <%= error %>
+              </div>
+              <% } else if(success && success.length > 0){ %>
+              <div class="alert alert-success" role="alert">
+                <%= success %>
+              </div>
+              <% } %>
+
+              <button type="submit" class="btn btn-primary float-right">Confirm Booking</button>
+            </form>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+  
+<%- include('./includes/footer.ejs') %>
+<%- include('./includes/end.ejs') %>
+

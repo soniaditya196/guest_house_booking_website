@@ -1,0 +1,54 @@
+<%- include('./includes/head.ejs') %>
+</head>
+<body>
+  <%- include('./includes/navigation.ejs') %>
+
+
+  <div class="container-fluid p-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-12 col-md-6">
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Login to check your booking status!</h3>
+
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="emailHelp" placeholder="Enter email" name="email"
+                             required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPasswordLogin">Password</label>
+                            <input type="password" class="form-control" id="inputPasswordLogin" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="/booking/register">New User? Book here.</a>
+                            <a href="/">Forgot Password?</a>
+                        </div>
+                        
+                        <% if(error && error.length > 0){ %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= error %>
+                        </div>
+                        <% } else if(success && success.length > 0){ %>
+                        <div class="alert alert-success" role="alert">
+                            <%= success %>
+                        </div>
+                        <% } %>
+
+
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+    
+<%- include('./includes/footer.ejs') %>
+<%- include('./includes/end.ejs') %>
+
